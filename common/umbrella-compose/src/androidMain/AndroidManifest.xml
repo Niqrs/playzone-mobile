@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.niqr.playzone_mobile.common.umbrella_compose" />
+<!--TODO: Do i really need manifest?-->
