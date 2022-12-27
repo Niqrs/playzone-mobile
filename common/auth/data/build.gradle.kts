@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.niqr.playzone_mobile.common.auth.data"
+    namespace = ProjectConfig.namespace("common.auth.data")
 }

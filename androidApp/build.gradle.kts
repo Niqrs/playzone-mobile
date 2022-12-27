@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.niqr.playzone_mobile.android"
+    namespace = ProjectConfig.namespace("android")
     compileSdk = 33
     defaultConfig {
         applicationId = "com.niqr.playzone_mobile.android"

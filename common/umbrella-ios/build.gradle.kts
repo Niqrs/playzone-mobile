@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.niqr.playzone_mobile.common.umbrella_ios"
+    namespace = ProjectConfig.namespace("common.umbrella_ios")
 }
