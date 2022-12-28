@@ -2,7 +2,7 @@ package ktor
 
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpTimeout
-import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
@@ -14,8 +14,8 @@ import org.kodein.di.bind
 import org.kodein.di.singleton
 
 internal val ktorModule = DI.Module("ktorModule") {
-    bind<HttpClient>(HttpEngineFactory().createEngine()) with singleton {
-        HttpClient {
+    bind<HttpClient>() with singleton {
+        HttpClient(HttpEngineFactory().createEngine()) {
             install(Logging) {
                 logger = Logger.SIMPLE
                 level = LogLevel.ALL

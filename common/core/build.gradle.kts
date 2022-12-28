@@ -21,7 +21,6 @@ kotlin {
                 implementation(Dependencies.Ktor.serialization)
                 implementation(Dependencies.Ktor.logging)
 
-
                 api(Dependencies.Kodein.core)
 
                 api(Dependencies.SqlDelight.core)
@@ -32,7 +31,8 @@ kotlin {
             dependencies {
                 implementation(Dependencies.Ktor.android)
                 implementation(Dependencies.SqlDelight.android)
-                implementation(Dependencies.Compose.runtime)
+                api(Dependencies.Compose.runtime)
+
             }
         }
 

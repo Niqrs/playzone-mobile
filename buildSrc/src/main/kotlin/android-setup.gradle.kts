@@ -1,3 +1,5 @@
+import Dependencies
+
 //import org.gradle.api.JavaVersion
 
 plugins {
@@ -8,8 +10,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 33
+        minSdk = 26
     }
 
     buildFeatures {
@@ -27,9 +28,13 @@ android {
 
     sourceSets {
         named("main") {
-            manifest.srcFile("src/androidMain/AndroidManifest.xml")
+            manifest.srcFile("src/androidMain/AndroidManifest.xml") //TODO: ???
             res.srcDirs("src/androidMain/res", "src/commonMain/resources")
         }
+    }
+
+    dependencies {
+        implementation(Dependencies.Compose.runtime)
     }
 }
     
