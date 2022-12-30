@@ -23,7 +23,8 @@ object PlatformSDK {
                 importAll(
                     umbrellaModule,
                     coreModule,
-                    gamesModule
+                    gamesModule,
+                    authModule
                 )
             }.direct
         )

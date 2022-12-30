@@ -31,8 +31,7 @@ kotlin {
             dependencies {
                 implementation(Dependencies.Ktor.android)
                 implementation(Dependencies.SqlDelight.android)
-                api(Dependencies.Compose.runtime)
-
+//                api(Dependencies.Compose.runtime)
             }
         }
 

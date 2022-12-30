@@ -21,7 +21,7 @@ object Dependencies {
     object Compose {
         private const val version = "1.2.2"
         const val gradlePlugin = "org.jetbrains.compose:compose-gradle-plugin:$version"
-        const val runtime = "org.jetbrains.compose.runtime:runtime:$version"
+//        const val runtime = "org.jetbrains.compose.runtime:runtime:$version"
     }
 
     object Ktor {
@@ -48,5 +48,30 @@ object Dependencies {
 
     object Android {
         const val gradlePlugin = "com.android.tools.build:gradle:8.0.0-alpha10"
+        const val composeActivity = "androidx.activity:activity-compose:1.6.1"
+
+        object Compose {
+            private const val version = "1.3.1"
+            const val ui = "androidx.compose.ui:ui:$version"
+            const val material = "androidx.compose.material:material:$version"
+            const val tooling = "androidx.compose.ui:ui-tooling:$version"
+            const val icons = "androidx.compose.material:material-icons-core:$version"
+            const val runtime = "androidx.compose.runtime:runtime:$version"
+        }
+    }
+
+    object Other {
+        object ViewModel {
+            private const val version = "0.12"
+            const val core = "com.adeo:kviewmodel:$version"
+            const val compose = "com.adeo:kviewmodel-compose:$version" // Compose extensions
+            const val odyssey = "com.adeo:kviewmodel-odyssey:$version" // Odyssey extensions
+        }
+
+        object Navigation {
+            private const val version = "1.2.0"
+            const val core = "io.github.alexgladkov:odyssey-core:$version"
+            const val compose = "io.github.alexgladkov:odyssey-compose:$version"
+        }
     }
 }

@@ -1,5 +1,6 @@
-plugins {
+plugins { //TODO: android-setup?
     id("com.android.application")
+    id("org.jetbrains.compose")
     kotlin("android")
 }
 

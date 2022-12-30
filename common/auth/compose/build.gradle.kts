@@ -4,20 +4,16 @@ plugins {
 }
 
 android {
-    namespace = ProjectConfig.namespace("common.umbrella_compose")
+    namespace = ProjectConfig.namespace("common.auth.compose")
 }
 
 kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(project(":common:core"))
+                implementation(project(":common:auth:presentation"))
                 implementation(project(":common:core-compose"))
                 implementation(project(":common:core-utils"))
-                implementation(project(":common:auth:data"))
-                implementation(project(":common:auth:compose"))
-                implementation(project(":common:games:data"))
-                implementation(project(":common:tournaments:data"))
 
                 implementation(Dependencies.Other.ViewModel.core)
                 implementation(Dependencies.Other.ViewModel.compose)
@@ -30,7 +26,10 @@ kotlin {
 
         androidMain {
             dependencies {
-                implementation(Dependencies.Android.composeActivity)
+                implementation(Dependencies.Android.Compose.ui)
+                implementation(Dependencies.Android.Compose.material)
+                implementation(Dependencies.Android.Compose.icons)
+                implementation(Dependencies.Android.Compose.tooling)
             }
         }
     }
